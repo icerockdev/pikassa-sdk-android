@@ -94,3 +94,8 @@
 
 -keep class kotlinx.coroutines.android.AndroidExceptionPreHandler
 -keep class kotlinx.coroutines.android.AndroidDispatcherFactory
+
+-keep class java.lang.instrument.ClassFileTransformer
+-keep class sun.misc.SignalHandler
+
+-keep class packagename {public *;}
