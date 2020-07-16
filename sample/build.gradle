@@ -6,6 +6,14 @@ apply plugin: "androidx.navigation.safeargs"
 apply plugin: 'com.google.gms.google-services'
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('/Users/denischornyy/StudioProjects/pikassa-android/keystore')
+            storePassword '232323'
+            keyAlias 'pikassa'
+            keyPassword '232323'
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
@@ -21,8 +29,9 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
 
@@ -37,12 +46,12 @@ android {
 
 dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation project(path: ':sdk')
     def retrofitVersion = "2.6.2"
     def coroutines_version = "1.3.6"
     def nav_version = "2.3.0"
     def daggerVersion = "2.27"
 
-    implementation project(":sdk")
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

@@ -8,7 +8,6 @@ import io.pikassa.sample.di.module.OrderServiceModule
 import io.pikassa.sample.di.module.RetrofitModule
 import io.pikassa.sample.di.module.UrlModule
 import io.pikassa.sample.helpers.OrderNetworkHelper
-import io.pikassa.sdk.helpers.PaymentHelper
 import javax.inject.Singleton
 
 /**
