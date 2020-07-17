@@ -1,4 +1,3 @@
 include ':sdk-release'
 include ':sample'
-include ':sdk'
 rootProject.name = "pikassa-android"
