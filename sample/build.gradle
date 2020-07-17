@@ -6,14 +6,6 @@ apply plugin: "androidx.navigation.safeargs"
 apply plugin: 'com.google.gms.google-services'
 
 android {
-    signingConfigs {
-        debug {
-            storeFile file('/Users/denischornyy/StudioProjects/pikassa-android/keystore')
-            storePassword '232323'
-            keyAlias 'pikassa'
-            keyPassword '232323'
-        }
-    }
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
